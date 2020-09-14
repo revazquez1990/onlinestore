@@ -1,0 +1,100 @@
+{
+  "products": [
+    {
+      "id": 11,
+      "name": "coca cola",
+      "price": 25,
+      "department_id": 1,
+      "category_id": 2
+    },
+    {
+      "id": 14,
+      "name": "Pizza Napolitana",
+      "price": 15,
+      "department_id": 1,
+      "category_id": 2
+    },
+    {
+      "name": "Hot Dogs",
+      "price": "10",
+      "id": 19,
+      "department_id": 1,
+      "category_id": 2
+    },
+    {
+      "name": "TV 42",
+      "price": 400,
+      "id": 25
+    },
+    {
+      "name": "Patrocinadores",
+      "price": 4,
+      "id": 26
+    }
+  ],
+  "departments": [
+    {
+      "id": 1,
+      "name": "Clothes"
+    },
+    {
+      "id": 2,
+      "name": "Supermarket"
+    },
+    {
+      "id": 3,
+      "name": "Appliance"
+    },
+    {
+      "id": 4,
+      "name": "Hardware store"
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "preserves",
+      "department_id": 2
+    },
+    {
+      "id": 2,
+      "name": "grain",
+      "department_id": 2
+    },
+    {
+      "id": 3,
+      "name": "drinks",
+      "department_id": 2
+    },
+    {
+      "id": 4,
+      "name": "meat and fish",
+      "department_id": 2
+    },
+    {
+      "id": 5,
+      "name": "paintings",
+      "department_id": 4
+    },
+    {
+      "id": 6,
+      "name": "industrial cleaning",
+      "department_id": 4
+    },
+    {
+      "id": 7,
+      "name": "air conditioning",
+      "department_id": 3
+    },
+    {
+      "id": 8,
+      "name": "televisions",
+      "department_id": 3
+    },
+    {
+      "id": 9,
+      "name": "heaters",
+      "department_id": 3
+    }
+  ]
+}
