@@ -52,7 +52,7 @@ export default function Product({product}) {
     return (
         <div className="card col m4">
             <div className="card-image waves-effect waves-block waves-light">
-                {/* <Image width={277} height={277}/> */}
+                <Image width={277} height={277}/>
                 <img src="algo.jpg" alt=""/>
             </div>
             <div className="card-content">

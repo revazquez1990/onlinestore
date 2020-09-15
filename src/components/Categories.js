@@ -20,33 +20,18 @@ const Categories = () => {
         <Fragment>
             <div class="card blue-grey darken-1">
                 <div class="card-content white-text">
-                    <span class="card-title">Card Title</span>
+                    <span class="card-title">Categories</span>
                 </div>
-                <div class="card-action">
-                    <a href="#">This is a link</a>
-                    <a href="#">This is a link</a>
-                </div>
-                <div class="card-action">
-                    <a href="#">This is a link</a>
-                    <a href="#">This is a link</a>
-                </div>
-                <div class="card-action">
-                    <a href="#">This is a link</a>
-                    <a href="#">This is a link</a>
-                </div>
-                <div class="card-action">
-                    <a href="#">This is a link</a>
-                    <a href="#">This is a link</a>
-                </div>
-            </div>
-            {
+                {
                 categories.map(category => (
                     <Category 
                         key={category.id}
                         category={category}
                     />
-                ))
-            }
+                    ))
+                }
+            </div>
+            
         </Fragment>
     )
 }

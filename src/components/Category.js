@@ -5,6 +5,8 @@ export default function Category({category}) {
     // const { id, name, department_id } = category;
 
     return (
-        <p>{category.name}</p>
+        <div class="card-action">
+            <a href="#">{category.name}</a>
+        </div>
     )
 }
