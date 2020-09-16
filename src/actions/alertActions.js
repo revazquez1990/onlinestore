@@ -3,7 +3,6 @@ import {
     HIDE_ALERT
 } from '../types';
 
-// Muestra una alert
 export function showAlert(alert){
     return (dispatch) => {
         dispatch(createAlert(alert));
@@ -14,7 +13,6 @@ const createAlert = alert => ({
     payload: alert
 })
 
-// Ocultar la alert
 export function hideAlertAction(){
     return (dispatch) => {
         dispatch(hideAlert());

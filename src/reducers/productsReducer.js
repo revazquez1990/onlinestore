@@ -10,8 +10,7 @@ import {
     PRODUCT_DELETE_SUCCESS,
     GET_PRODUCT_EDIT,
     PRODUCT_EDIT_SUCCESS,
-    PRODUCT_EDIT_ERROR
-    // START_EDIT_PRODUCT
+    PRODUCT_EDIT_ERROR,
 } from '../types';
 
 const initialState = {
@@ -79,7 +78,7 @@ export default function(state = initialState, action){
                     product.id === action.payload.id ? product = action.payload : product
                 )
             }
-
+        
         default: 
             return state;
     }

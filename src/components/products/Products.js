@@ -2,14 +2,15 @@ import React, {Fragment, useEffect} from 'react';
 import Product from './Product';
 // Redux
 import { useSelector, useDispatch } from 'react-redux';
-import { getProductsAction } from '../actions/productActions';
+import { getProductsAction } from '../../actions/productActions';
+// Material
+import Grid from '@material-ui/core/Grid';
 
 const Products = () => {
 
     const dispatch = useDispatch();
 
     useEffect( () => {
-        // consultar la api
         const loadProducts = () => dispatch( getProductsAction());
         loadProducts();
     }, []);
@@ -20,16 +21,13 @@ const Products = () => {
     const error = useSelector( state => state.products.error);
     const loading = useSelector( state => state.products.loading);
 
-    const getNameById = id => {
-        
-    }
 
     return (
         <Fragment>
             <h2 className="text-center my-5">
                 Products list
             </h2>
-            <div className="row">
+            <Grid container spacing={2}>
                 { error ? <p className="font-weight-bold alert alert-danger text-center">Hubo un error</p> : null }
                 { loading ? <div className="progress"><div className="indeterminate"></div></div> : null }
                     {
@@ -42,7 +40,8 @@ const Products = () => {
 
                         ))
                     }
-            </div>
+            </Grid>
+
         </Fragment>
     )
 }

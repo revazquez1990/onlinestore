@@ -10,37 +10,37 @@ import {
     PRODUCT_DELETE_SUCCESS,
     GET_PRODUCT_EDIT,
     PRODUCT_EDIT_SUCCESS,
-    // PRODUCT_EDIT_ERROR,
+    PRODUCT_EDIT_ERROR,
     START_EDIT_PRODUCT
 } from '../types';
 import clientAxios from '../config/axios';
 import Swal from 'sweetalert2';
 
-// Crear nuevos Productos
+// Create new Product
 export function createNewProductAction(product) {
     return async (dispatch) => {
         dispatch( addProduct() );
         
         try {
-            // Insertar en la API
+            // API Insert
             await clientAxios.post('/products', product)
-            // Si todo sale bien, actualizar el state
+            // If all goes well, update the state
             dispatch(addProductSuccess(product));
-            // Alerta !!! 
+            // Alert 
             Swal.fire(
-                'Correcto',
-                'El product se agrego corectamente !!!',
+                'Success',
+                'The product was added successfully',
                 'success'
             )
         } catch(error) {
             console.log(error);
-            // si hay un error cambiar el state
+            // If error => change state
             dispatch(addProductError(true));
 
             Swal.fire({
                 icon: 'error',
-                title: 'Hubo un error',
-                text: 'Hubo un error intente de nuevo'
+                title: 'An error was detected',
+                text: 'There was an error try again'
             })
         }
     }
@@ -51,19 +51,19 @@ const addProduct = () => ({
     payload: true
 });
 
-// Si el product se guarda en la BD
+// If success => save DB
 const addProductSuccess = product => ({
     type: ADD_PRODUCT_SUCCESS,
     payload: product
 });
 
-// Si hubo un error
+// If error
 const addProductError = estado => ({
     type: ADD_PRODUCT_ERROR,
     payload: estado
 });
 
-// Funcion que descarga los products de la base de datos
+// Get Products from the DB
 export function getProductsAction() {
     return async (dispatch) => {
         dispatch( downloadProducts() );
@@ -96,7 +96,7 @@ const downloadProductError = () => ({
     payload: true
 })
 
-// Selecciona y elimina el product
+// Select and delete a Product 
 export function deleteProductAction(id) {
     return async (dispatch) => {
         dispatch(getProductDelete(id));
@@ -104,7 +104,7 @@ export function deleteProductAction(id) {
         try {
             await clientAxios.delete(`/products/${id}`);
             dispatch(deleteProductSuccess());
-            // Si se elimina, mostrar alert
+            // If eliminated, alert show
             Swal.fire(
                 'Deleted!',
                 'Your file has been deleted.',
@@ -127,7 +127,7 @@ const deleteProductError = () => ({
     payload: true
 })
 
-// Colocar el product en edicion
+// Place the product in edition
 export function getProductEdit(product) {
     return (dispatch) => {
         dispatch( getProductEditAction(product) );
@@ -139,7 +139,7 @@ const getProductEditAction = product => ({
     payload: product
 })
 
-// Edita un registro en la BD
+// Edit the record in the DB
 export function editProductAction(product) {
     return async (dispatch) => {
         dispatch( editProduct());

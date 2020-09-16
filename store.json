@@ -2,34 +2,66 @@
   "products": [
     {
       "id": 11,
-      "name": "coca cola",
+      "name": "coca cola light",
       "price": 25,
-      "department_id": 1,
-      "category_id": 2
+      "category_id": 3,
+      "department_id": 2
     },
     {
       "id": 14,
-      "name": "Pizza Napolitana",
-      "price": 15,
-      "department_id": 1,
-      "category_id": 2
+      "name": "Pizza",
+      "price": "25",
+      "category_id": 3,
+      "department_id": 2
     },
     {
-      "name": "Hot Dogs",
-      "price": "10",
       "id": 19,
-      "department_id": 1,
-      "category_id": 2
+      "name": "Hot Dogs",
+      "price": "19",
+      "category_id": 4,
+      "department_id": 2
     },
     {
+      "id": 25,
       "name": "TV 42",
       "price": 400,
-      "id": 25
+      "category_id": 8,
+      "department_id": 3
     },
     {
-      "name": "Patrocinadores",
-      "price": 4,
-      "id": 26
+      "id": 27,
+      "name": "Carne fresca",
+      "price": "18",
+      "category_id": 4,
+      "department_id": 2
+    },
+    {
+      "name": "coffe",
+      "price": "6",
+      "category_id": 3,
+      "id": 31,
+      "department_id": 2
+    },
+    {
+      "name": "pan con perro ",
+      "price": "10",
+      "department_id": 2,
+      "category_id": 4,
+      "id": 35
+    },
+    {
+      "name": "Air motor",
+      "price": "35",
+      "department_id": 3,
+      "category_id": 7,
+      "id": 36
+    },
+    {
+      "name": "Corona",
+      "price": "5",
+      "department_id": 2,
+      "category_id": 3,
+      "id": 37
     }
   ],
   "departments": [
@@ -48,17 +80,20 @@
     {
       "id": 4,
       "name": "Hardware store"
+    },
+    {
+      "name": "Men",
+      "id": 5
+    },
+    {
+      "name": "Women",
+      "id": 6
     }
   ],
   "categories": [
     {
       "id": 1,
       "name": "preserves",
-      "department_id": 2
-    },
-    {
-      "id": 2,
-      "name": "grain",
       "department_id": 2
     },
     {
@@ -92,9 +127,14 @@
       "department_id": 3
     },
     {
-      "id": 9,
-      "name": "heaters",
-      "department_id": 3
+      "name": "Baby clothes",
+      "department_id": 1,
+      "id": 9
+    },
+    {
+      "name": "Women's clothes",
+      "department_id": 1,
+      "id": 10
     }
   ]
 }
