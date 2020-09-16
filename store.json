@@ -18,8 +18,8 @@
       "id": 19,
       "name": "Hot Dogs",
       "price": "19",
-      "category_id": 4,
-      "department_id": 2
+      "category_id": 6,
+      "department_id": 4
     },
     {
       "id": 25,
@@ -135,6 +135,11 @@
       "name": "Women's clothes",
       "department_id": 1,
       "id": 10
+    },
+    {
+      "name": "women's adidas sweatshirt",
+      "department_id": 6,
+      "id": 11
     }
   ]
 }

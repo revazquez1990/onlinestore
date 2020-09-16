@@ -60,8 +60,8 @@ export default function EditProduct() {
 
         <div className="mt-25">
             <Grid container spacing={3}>
-                <Grid item xs={3}></Grid>
-                <Grid item xs={6}>
+                <Grid item xs={12} md={3}></Grid>
+                <Grid item xs={12} md={6}>
                 <h2>Edit Product</h2>
                 <form Validate autoComplete
                 onSubmit={submitEditProduct}
