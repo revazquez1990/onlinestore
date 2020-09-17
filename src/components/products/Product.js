@@ -9,7 +9,7 @@ import Swal from 'sweetalert2';
 // Material UI 
 import { Card, Grid, CardActionArea, CardActions, CardContent, Typography,  Button } from '@material-ui/core';
 
-export default function Product({product}) {
+export default function Product({product, catProduct}) {
 
     const {id, name, price, department_id, category_id} = product;
 
@@ -44,14 +44,21 @@ export default function Product({product}) {
             <Grid container justify="center" >
             <Card >
                 <CardActionArea>
-                    <Image width={317} height={200}/>
+                    {/* <Image width={317} height={200}/> */}
                     <CardContent>
-                    <Typography gutterBottom variant="h5" component="h2">
-                        {name}
-                    </Typography>
-                    <Typography variant="body2" color="textSecondary" component="p">
-                        $ {price}
-                    </Typography>
+                        <Typography gutterBottom variant="h5" component="h2">
+                            {name}
+                        </Typography>
+
+                        <Typography variant="body2" component="p">
+                            {catProduct.map(cat => (
+                                cat.name
+                            ))} 
+                        </Typography>
+                        
+                        <Typography variant="body2" color="textSecondary" component="p">
+                            $ {price}
+                        </Typography>
                     </CardContent>
                 </CardActionArea>
                 <CardActions>

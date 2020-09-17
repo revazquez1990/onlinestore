@@ -1,26 +1,29 @@
-import React, {Fragment, useEffect} from 'react';
+import React, {Fragment, useEffect, useState } from 'react';
 import Product from './Product';
 // Redux
 import { useSelector, useDispatch } from 'react-redux';
 import { getProductsAction } from '../../actions/productActions';
+import { getCategoriesAction } from '../../actions/categoryActions'
 // Material
 import Grid from '@material-ui/core/Grid';
 
 const Products = () => {
 
     const dispatch = useDispatch();
+    const [ catName, setCatName ] = useState('');
 
     useEffect( () => {
         const loadProducts = () => dispatch( getProductsAction());
         loadProducts();
+
+        const loadCategories = () => dispatch( getCategoriesAction());
+        loadCategories();
     }, []);
 
-    
-
     const products = useSelector( state => state.products.products);
+    const categories = useSelector( state => state.categories.categories );
     const error = useSelector( state => state.products.error);
     const loading = useSelector( state => state.products.loading);
-
 
     return (
         <Fragment>
@@ -36,6 +39,7 @@ const Products = () => {
                             <Product 
                                 key={product.id}
                                 product={product}
+                                catProduct={categories.filter(cat => cat.id === product.category_id)}
                             />
 
                         ))

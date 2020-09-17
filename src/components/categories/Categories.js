@@ -17,7 +17,6 @@ const Categories = () => {
     const dispatch = useDispatch();
 
     useEffect( () => {
-        // consultar la api
         const loadCategories = () => dispatch( getCategoriesAction());
         loadCategories();
     }, []);
