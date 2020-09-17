@@ -44,7 +44,7 @@ export default function Product({product, catProduct}) {
             <Grid container justify="center" >
             <Card >
                 <CardActionArea>
-                    {/* <Image width={317} height={200}/> */}
+                    <Image width={317} height={200}/>
                     <CardContent>
                         <Typography gutterBottom variant="h5" component="h2">
                             {name}
@@ -55,8 +55,8 @@ export default function Product({product, catProduct}) {
                                 cat.name
                             ))} 
                         </Typography>
-                        
-                        <Typography variant="body2" color="textSecondary" component="p">
+
+                        <Typography variant="body2" color="error" component="p">
                             $ {price}
                         </Typography>
                     </CardContent>
