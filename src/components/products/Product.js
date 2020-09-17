@@ -1,6 +1,5 @@
 import React, {useEffect} from 'react';
 import { useHistory } from 'react-router-dom';
-import Image from 'react-random-image';
 // Redux
 import {  deleteProductAction, getProductEdit } from '../../actions/productActions';
 import { useDispatch, useSelector } from 'react-redux';
@@ -8,8 +7,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import Swal from 'sweetalert2';
 // Material UI 
 import { Card, Grid, CardActionArea, CardActions, CardContent, Typography,  Button } from '@material-ui/core';
+import Imagen from './Imagen'
 
-export default function Product({product, catProduct}) {
+export default function Product({product, catProduct, imageUrl}) {
 
     const {id, name, price, department_id, category_id} = product;
 
@@ -44,7 +44,9 @@ export default function Product({product, catProduct}) {
             <Grid container justify="center" >
             <Card >
                 <CardActionArea>
-                    <Image width={317} height={200}/>
+                    <Imagen 
+                    name={name}
+                    />
                     <CardContent>
                         <Typography gutterBottom variant="h5" component="h2">
                             {name}

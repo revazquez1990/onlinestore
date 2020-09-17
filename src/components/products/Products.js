@@ -10,7 +10,6 @@ import Grid from '@material-ui/core/Grid';
 const Products = () => {
 
     const dispatch = useDispatch();
-    const [ catName, setCatName ] = useState('');
 
     useEffect( () => {
         const loadProducts = () => dispatch( getProductsAction());
@@ -18,6 +17,7 @@ const Products = () => {
 
         const loadCategories = () => dispatch( getCategoriesAction());
         loadCategories();
+
     }, []);
 
     const products = useSelector( state => state.products.products);
